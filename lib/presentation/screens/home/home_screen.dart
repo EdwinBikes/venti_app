@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -13,64 +14,68 @@ class HomeScreen extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
+        backgroundColor: Colors.white,
         body: SizedBox(
-      child: Column(
-        children: [
-          FadeIn(
-            child: Stack(
-              children: [
-                const Image(
-                  image: AssetImage('assets/images/login.png'),
-                ),
-                Positioned(
-                  width: 80,
-                  top: 70,
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_back_ios_new_rounded,
-                        color: colors.primary),
+          child: Column(
+            children: [
+              FadeIn(
+                child: const Stack(children: [
+                  Image(
+                    image: AssetImage('assets/images/login.png'),
                   ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            child: Center(
-              child: Column(
-                children: [
-                  Text(
-                    'Venti',
-                    style: TextStyle(
-                        fontSize: 60,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.bold,
-                        color: colors.primary),
-                  ),
-                  FilledButton(
-                    style:
-                        FilledButton.styleFrom(backgroundColor: colors.primary),
-                    child: const SizedBox(
-                        width: 200, child: Center(child: Text('Login'))),
-                    onPressed: () {},
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.black,
-                        backgroundColor: Colors.white),
-                    child: const SizedBox(
-                        width: 200, child: Center(child: Text('Crear Cuenta'))),
-                    onPressed: () {},
-                  ),
-                  Text(
-                    'Necesitas ayuda?',
-                    style: TextStyle(color: Colors.cyan[600]),
-                  )
-                ],
+                  // Positioned(
+                  //   width: 80,
+                  //   top: 70,
+                  //   child: IconButton(
+                  //     onPressed: () {
+                  //       Navigator.pop(context);
+                  //     },
+                  //     icon: Icon(Icons.arrow_back_ios_new_rounded,
+                  //         color: colors.primary),
+                  //   ),
+                  // ),
+                  SizedBox()
+                ]),
               ),
-            ),
+              SizedBox(
+                child: Center(
+                  child: Column(
+                    children: [
+                      Text(
+                        'venti',
+                        style: GoogleFonts.katibeh(
+                          fontSize: 90,
+                        ),
+                      ),
+                      FilledButton(
+                        style: FilledButton.styleFrom(
+                            backgroundColor: Colors.black),
+                        child: const SizedBox(
+                            width: 200, child: Center(child: Text('Login'))),
+                        onPressed: () {},
+                      ),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                            foregroundColor: Colors.black,
+                            backgroundColor: Colors.white),
+                        child: const SizedBox(
+                            width: 200,
+                            child: Center(child: Text('Crear Cuenta'))),
+                        onPressed: () {},
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Text(
+                        'Necesitas ayuda?',
+                        style: TextStyle(color: Colors.cyan[600]),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ));
+        ));
   }
 }
