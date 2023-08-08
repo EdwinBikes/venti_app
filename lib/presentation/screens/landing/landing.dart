@@ -55,6 +55,13 @@ class _LandingScreenState extends State<LandingScreen> {
     super.dispose();
   }
 
+  void goToNextPage() {
+    final currentPage = pageViewController.page?.toInt() ?? 0;
+    if (currentPage < slides.length - 1) {
+      pageViewController.jumpToPage(currentPage + 1);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,10 +72,17 @@ class _LandingScreenState extends State<LandingScreen> {
             controller: pageViewController,
             physics: const BouncingScrollPhysics(),
             children: slides
-                .map((slideData) => _Slide(
-                    title: slideData.title,
-                    caption: slideData.caption,
-                    imagenUrl: slideData.imagenUrl))
+                .asMap()
+                .map((index, slideData) => MapEntry(
+                    index,
+                    _Slide(
+                      title: slideData.title,
+                      caption: slideData.caption,
+                      imagenUrl: slideData.imagenUrl,
+                      onContinuePressed: goToNextPage,
+                      isLastSlide: index == slides.length - 1,
+                    )))
+                .values
                 .toList(),
           ),
           endReached
@@ -84,7 +98,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           ),
                         ),
                       );
-                    }, //=> context.pop(),
+                    },
                     child: const Text('Comenzar'),
                   ),
                 )
@@ -99,14 +113,21 @@ class _Slide extends StatelessWidget {
   final String title;
   final String caption;
   final String imagenUrl;
+  final VoidCallback onContinuePressed;
+  final bool isLastSlide;
 
-  const _Slide(
-      {required this.title, required this.caption, required this.imagenUrl});
+  const _Slide({
+    required this.title,
+    required this.caption,
+    required this.imagenUrl,
+    required this.onContinuePressed,
+    required this.isLastSlide,
+  });
 
   @override
   Widget build(BuildContext context) {
     final titleStyle = Theme.of(context).textTheme.titleLarge;
-    final captionStyle = Theme.of(context).textTheme.bodySmall;
+    final captionStyle = Theme.of(context).textTheme.bodyMedium;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -127,19 +148,15 @@ class _Slide extends StatelessWidget {
               style: captionStyle,
             ),
             const SizedBox(height: 20),
-            Positioned(
-                bottom: 20,
-                right: 30,
-                child: FadeInRight(
-                  from: 15,
-                  delay: const Duration(seconds: 1),
-                  child: FilledButton(
-                    onPressed:
-                        () {}, //=>context.pop(), // pop es ir a la pantalla atras
-
-                    child: const Text('Continuar'),
-                  ),
-                ))
+            if (!isLastSlide)
+              FadeInRight(
+                from: 15,
+                delay: const Duration(seconds: 1),
+                child: FilledButton(
+                  onPressed: onContinuePressed,
+                  child: const Text('Continuar'),
+                ),
+              ),
           ],
         ),
       ),
