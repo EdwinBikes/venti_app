@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:venti_app/presentation/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   static const name = 'login-screen';
@@ -38,15 +39,15 @@ class LoginScreen extends StatelessWidget {
             )),
           ),
           const SizedBox(height: 40),
-          const CustomImputField(),
+          const _FromWidget(),
         ],
       ),
     ));
   }
 }
 
-class _CustomImputField extends StatelessWidget {
-  const _CustomImputField();
+class _FromWidget extends StatelessWidget {
+  const _FromWidget();
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:venti_app/presentation/screens.dart';
+import 'package:venti_app/presentation/screens/screens.dart';
 
 class SlideInfo {
   final String title;
