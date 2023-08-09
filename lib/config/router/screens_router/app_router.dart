@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:venti_app/presentation/screens/screens.dart';
+import 'package:venti_app/export_links.dart';
 
 final appRouter = GoRouter(initialLocation: '/', routes: [
   GoRoute(

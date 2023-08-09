@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:venti_app/presentation/widgets/widgets.dart';
+import 'package:venti_app/export_links.dart';
 
 class LoginScreen extends StatelessWidget {
   static const name = 'login-screen';

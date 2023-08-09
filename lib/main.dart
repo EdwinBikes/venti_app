@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:venti_app/config/router/router.dart';
-import 'package:venti_app/config/theme/app_theme.dart';
-import 'package:venti_app/presentation/providers/theme_provider.dart';
+import 'package:venti_app/export_links.dart';
 
 void main() => runApp(const ProviderScope(child: MyApp()));
 
