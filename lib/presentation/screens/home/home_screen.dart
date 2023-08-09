@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:venti_app/presentation/screens.dart';
 
 class HomeScreen extends StatelessWidget {
   static const name = 'home-screen';
@@ -11,8 +12,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-
     return Scaffold(
         backgroundColor: Colors.white,
         body: SizedBox(
@@ -52,7 +51,12 @@ class HomeScreen extends StatelessWidget {
                             backgroundColor: Colors.black),
                         child: const SizedBox(
                             width: 200, child: Center(child: Text('Login'))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
+                        },
                       ),
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(

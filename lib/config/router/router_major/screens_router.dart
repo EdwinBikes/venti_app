@@ -15,18 +15,18 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
-      title: 'Counter Screen',
-      subTitle: 'Contador',
-      link: '/counter',
+      title: 'Landing Screen',
+      subTitle: 'landing-screen',
+      link: '/landing-screen',
       icon: Icons.star_border),
-  // MenuItem(
-  //     title: 'Botones',
-  //     subTitle: 'Varios botones en Flutter',
-  //     link: '/buttons',
-  //     icon: Icons.smart_button_outlined),
-  // MenuItem(
-  //     title: 'Tarjetas',
-  //     subTitle: 'Un contenedor estilizado',
-  //     link: '/cards',
-  //     icon: Icons.credit_card),
+  MenuItem(
+      title: 'Login Screen',
+      subTitle: 'login login',
+      link: '/login-screen',
+      icon: Icons.smart_button_outlined),
+  MenuItem(
+      title: 'Home Screen',
+      subTitle: 'home screen',
+      link: '/home-screen',
+      icon: Icons.credit_card),
 ];
