@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:venti_app/config/theme/app_theme.dart';
 
-// listado de colores inmutables de la aplicación
 final colorListProvider = Provider((ref) => colorList);
 
 final isDarkmodeProvider = StateProvider((ref) => true);
@@ -12,7 +11,6 @@ final themeNotifierProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
   (ref) => ThemeNotifier(),
 );
 
-// class themeController extends StateNotifier { ----- se recomienda el nombre de la clase segun el tipo de dato que va a manejar
 class ThemeNotifier extends StateNotifier<AppTheme> {
   ThemeNotifier() : super(AppTheme());
 

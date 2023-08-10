@@ -11,16 +11,16 @@ class SlideInfo {
 }
 
 final slides = <SlideInfo>[
-  SlideInfo(
-      'Bienvenido a Venti',
-      'Donde llevas el invetario de tu negocio en tu mano!',
+  SlideInfo('Bienvenido a Venti', 'Donde llevas el inventario de tu negocio!',
       'assets/images/1.png'),
   SlideInfo(
-      'Tu negocio en tiempo real',
+      'Tus ventas en tiempo real',
       'Donde tengas internet podras monitorear tu negocio!',
       'assets/images/2.png'),
   SlideInfo('Podras compartir la información',
       'Nosotros nos encargaremos de todo!', 'assets/images/3.png'),
+  SlideInfo('Tu información siempre segura',
+      'No te preocupes, cuidamos tu negocio!', 'assets/images/5.png'),
 ];
 
 class LandingScreen extends StatefulWidget {
@@ -93,9 +93,7 @@ class _LandingScreenState extends State<LandingScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(
-                            homeScreen: '',
-                          ),
+                          builder: (context) => const HomeScreen(),
                         ),
                       );
                     },
