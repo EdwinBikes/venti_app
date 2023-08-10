@@ -28,13 +28,13 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: screenHeight * 0.03,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
               child: SizedBox(
                   child: Text('¡Bienvenido!',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: screenHeight * 0.05,
+                        fontSize: 25,
                       ))),
             ),
             SizedBox(height: screenHeight * 0.08),

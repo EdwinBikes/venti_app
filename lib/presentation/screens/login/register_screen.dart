@@ -33,17 +33,33 @@ class RegisterScreen extends StatelessWidget {
                 'Hola! registrate para iniciar',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: 25,
                 ),
               ),
             ),
             const SizedBox(height: 50),
             const Padding(
               padding: EdgeInsets.symmetric(
-                  vertical: 16, horizontal: 18), // Ajusta los valores
+                  vertical: 12, horizontal: 18), // Ajusta los valores
               child: CustomTextField(
-                labelText: 'Ingresa tu email',
+                labelText: 'Nombre de usuario',
                 hintText: AutofillHints.email,
+                keyboardType: TextInputType.emailAddress,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18),
+              child: CustomTextField(
+                labelText: 'Correo Electronico',
+                hintText: AutofillHints.password,
+                keyboardType: TextInputType.emailAddress,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
+              child: CustomTextField(
+                labelText: 'Contraseña',
+                hintText: AutofillHints.password,
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
@@ -55,27 +71,18 @@ class RegisterScreen extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
-            const Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                child: Text(
-                  'No recuerdas tu Contraseña?',
-                ),
-              ),
-            ),
-            const Spacer(), // Espacio flexible para empujar hacia arriba el resto del contenido
+            const SizedBox(height: 30),
             const CustomButtonBlack(
               destination: '/home-screen',
               buttonText: 'Ingresar',
             ),
-            const SizedBox(height: 16), // Espacio adicional
+            const Spacer(),
             const TextBottomScreens(
-              textPrimary: '¿No tienes una cuenta? ',
-              textSecund: 'Registrate Ahora',
+              textPrimary: '¿Ya tienes una cuenta? ',
+              textSecund: 'Login',
               textDestination: '/home-screen',
             ),
-            const SizedBox(height: 16), // Espacio adicional
+            const SizedBox(height: 16),
           ],
         ),
       ),
