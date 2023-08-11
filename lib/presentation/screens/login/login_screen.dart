@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:venti_app/export_links.dart';
-import 'package:venti_app/presentation/widgets/text/text_bottom_screens.dart';
 
 class LoginScreen extends StatelessWidget {
   static const name = 'login-screen';
@@ -57,12 +56,15 @@ class LoginScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: 18, vertical: screenHeight * 0.015),
-                child: const Text(
-                  'No recuerdas tu Contraseña?',
-                ),
-              ),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: 18, vertical: screenHeight * 0.015),
+                  child: GestureDetector(
+                    onTap: () => context.go('/forgot-screen'),
+                    child: const Text(
+                      'No recuerdas tu Contraseña?',
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  )),
             ),
             SizedBox(
               height: screenHeight * 0.02,
@@ -79,6 +81,7 @@ class LoginScreen extends StatelessWidget {
               textPrimary: '¿No tienes una cuenta? ',
               textSecund: 'Registrate Ahora',
               textDestination: '/register-screen',
+              showDialogOption: true,
             ),
           ],
         ),

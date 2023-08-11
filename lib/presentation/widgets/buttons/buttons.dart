@@ -54,6 +54,7 @@ class CustomButtonWhite extends StatelessWidget {
       ),
       child: SizedBox(
         width: double.infinity,
+        height: 50,
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
               shape: const RoundedRectangleBorder(

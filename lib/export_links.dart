@@ -7,4 +7,5 @@ export 'package:venti_app/presentation/screens/login/login_screen.dart';
 export 'package:venti_app/presentation/widgets/buttons/buttons.dart';
 export 'package:venti_app/presentation/widgets/customs/custom_appbar.dart';
 export 'package:venti_app/presentation/widgets/customs/custom_imput_field.dart';
+export 'package:venti_app/presentation/widgets/text/text_bottom_screens.dart';
 export 'package:venti_app/presentation/widgets/textfield/text_field.dart';

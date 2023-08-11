@@ -5,11 +5,15 @@ class TextBottomScreens extends StatelessWidget {
   final String textPrimary;
   final String textSecund;
   final String textDestination;
-  const TextBottomScreens(
-      {super.key,
-      required this.textPrimary,
-      required this.textSecund,
-      required this.textDestination});
+  final bool showDialogOption;
+
+  const TextBottomScreens({
+    super.key,
+    required this.textPrimary,
+    required this.textSecund,
+    required this.textDestination,
+    this.showDialogOption = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,27 +23,31 @@ class TextBottomScreens extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 20),
         child: GestureDetector(
           onTap: () {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: const Text("Crear cuenta"),
-                  content: const Text("¿Deseas crear una cuenta?"),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Text("Cancelar"),
-                    ),
-                    TextButton(
-                      onPressed: () => context.go(textDestination),
-                      child: const Text("Aceptar"),
-                    ),
-                  ],
-                );
-              },
-            );
+            if (showDialogOption) {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: const Text("Crear cuenta"),
+                    content: const Text("¿Deseas crear una cuenta?"),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text("Cancelar"),
+                      ),
+                      TextButton(
+                        onPressed: () => context.go(textDestination),
+                        child: const Text("Aceptar"),
+                      ),
+                    ],
+                  );
+                },
+              );
+            } else {
+              context.go(textDestination);
+            }
           },
           child: RichText(
             text: TextSpan(

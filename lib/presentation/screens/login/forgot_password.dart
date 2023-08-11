@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:venti_app/export_links.dart';
 
-class RegisterScreen extends StatelessWidget {
-  static const name = 'register-screen';
-  const RegisterScreen({super.key});
+class ForgotScreen extends StatelessWidget {
+  static const name = 'forgot-screen';
+  const ForgotScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,50 +27,37 @@ class RegisterScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
-                'Hola! registrate para iniciar',
+                '¿Has olvidado tu contraseña?',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                  fontSize: 22,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: Text(
+                '¡No te preocupes! Ingrese la dirección de correo electrónico vinculada con su cuenta.',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[700],
                 ),
               ),
             ),
             const SizedBox(height: 50),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 18),
               child: CustomTextField(
-                labelText: 'Nombre de usuario',
+                labelText: 'Ingresa tu Email',
                 hintText: AutofillHints.email,
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 18),
-              child: CustomTextField(
-                labelText: 'Correo Electronico',
-                hintText: AutofillHints.password,
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
-              child: CustomTextField(
-                labelText: 'Contraseña',
-                hintText: AutofillHints.password,
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 18),
-              child: CustomTextField(
-                labelText: 'Ingresa tu contraseña',
-                hintText: AutofillHints.password,
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
             const SizedBox(height: 30),
             const CustomButtonBlack(
-              destination: '/home-screen',
-              buttonText: 'Ingresar',
+              destination: '/newpassword-screen',
+              buttonText: 'Enviar Código',
             ),
             const Spacer(),
             const TextBottomScreens(

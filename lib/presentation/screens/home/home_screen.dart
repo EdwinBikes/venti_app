@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:venti_app/export_links.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -52,10 +53,13 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 45,
                     ),
-                    Text(
-                      'Necesitas ayuda?',
-                      style: TextStyle(color: Colors.cyan[600]),
-                    ),
+                    TextButton(
+                      onPressed: () => context.go('/ladin-screen'),
+                      child: Text(
+                        'Necesitas ayuda?',
+                        style: TextStyle(color: Colors.cyan[600]),
+                      ),
+                    )
                   ],
                 ),
               ),
