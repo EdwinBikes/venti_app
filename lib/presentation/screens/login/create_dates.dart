@@ -24,7 +24,7 @@ class CreateDatesScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 35),
+              const SizedBox(height: 20),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
@@ -52,31 +52,31 @@ class CreateDatesScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Nombre del comercio',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Nombre de la empresa',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Tipo de identificacion del comercio',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Publica, privada, mixta',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Razón social',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Razon social',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Teléfono',
-                  hintText: AutofillHints.email,
+                  hintText: 'Numero de Teléfono',
                   keyboardType: TextInputType.emailAddress,
                 ),
               ),
@@ -84,32 +84,32 @@ class CreateDatesScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Dirección',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Dirección',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Nombre del representante legal',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Nombre y Apellido',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'Tipo de identificacion del representante legal',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Tipo de identificación',
+                  keyboardType: TextInputType.name,
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
                   labelText: 'N° de identificación de representante legal',
-                  hintText: AutofillHints.email,
-                  keyboardType: TextInputType.emailAddress,
+                  hintText: 'Numero de documento',
+                  keyboardType: TextInputType.number,
                 ),
               ),
               const SizedBox(height: 30),

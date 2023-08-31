@@ -9,6 +9,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -39,37 +40,41 @@ class RegisterScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
               child: CustomTextField(
                 labelText: 'Nombre de usuario',
-                hintText: AutofillHints.email,
-                keyboardType: TextInputType.emailAddress,
+                hintText: 'Nombre y apellido',
+                keyboardType: TextInputType.name,
               ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: CustomTextField(
                 labelText: 'Correo Electronico',
-                hintText: AutofillHints.password,
+                hintText: 'Correo electronico',
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
               child: CustomTextField(
+                obscureText: true,
+                suffixIcon: true,
                 labelText: 'Contraseña',
-                hintText: AutofillHints.password,
-                keyboardType: TextInputType.emailAddress,
+                hintText: 'Contraseña',
+                keyboardType: TextInputType.visiblePassword,
               ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: CustomTextField(
+                obscureText: true,
+                suffixIcon: true,
                 labelText: 'Ingresa tu contraseña',
-                hintText: AutofillHints.password,
-                keyboardType: TextInputType.emailAddress,
+                hintText: 'Contraseña',
+                keyboardType: TextInputType.visiblePassword,
               ),
             ),
             const SizedBox(height: 30),
             const CustomButtonBlack(
-              destination: '/home-screen',
+              destination: '/createdates-screen',
               buttonText: 'Ingresar',
             ),
             const Spacer(),

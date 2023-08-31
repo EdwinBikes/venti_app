@@ -1,13 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:venti_app/export_links.dart';
-import 'package:venti_app/presentation/screens/login/create_dates.dart';
-import 'package:venti_app/presentation/screens/login/forgot_password.dart';
-import 'package:venti_app/presentation/screens/login/new_password.dart';
-import 'package:venti_app/presentation/screens/login/register_screen.dart';
 
-final appRouter = GoRouter(initialLocation: '/', routes: [
+final appRouter = GoRouter(initialLocation: '/home-screen', routes: [
   GoRoute(
-    path: '/',
+    path: '/landing',
     name: LandingScreen.name,
     builder: (context, state) => const LandingScreen(),
   ),
@@ -40,5 +36,15 @@ final appRouter = GoRouter(initialLocation: '/', routes: [
     path: '/createdates-screen',
     name: CreateDatesScreen.name,
     builder: (context, state) => const CreateDatesScreen(),
+  ),
+  GoRoute(
+    path: '/newcashier-screen',
+    name: NewCashierScreen.name,
+    builder: (context, state) => const NewCashierScreen(),
+  ),
+  GoRoute(
+    path: '/totalcashiers-screen',
+    name: TotalCashierScreen.name,
+    builder: (context, state) => const TotalCashierScreen(),
   ),
 ]);
