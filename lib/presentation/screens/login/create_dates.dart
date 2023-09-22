@@ -59,7 +59,7 @@ class CreateDatesScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
-                  labelText: 'Tipo de identificacion del comercio',
+                  labelText: 'Tipo de identificación del comercio',
                   hintText: 'Publica, privada, mixta',
                   keyboardType: TextInputType.name,
                 ),
@@ -99,7 +99,7 @@ class CreateDatesScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
                 child: CustomTextField(
-                  labelText: 'Tipo de identificacion del representante legal',
+                  labelText: 'Tipo de identificación del representante legal',
                   hintText: 'Tipo de identificación',
                   keyboardType: TextInputType.name,
                 ),
