@@ -21,21 +21,20 @@ class CustomTextField extends StatefulWidget {
 }
 
 class CustomTextFieldState extends State<CustomTextField> {
-  bool _obscureText = true;
-
   @override
   Widget build(BuildContext context) {
     return TextField(
       keyboardType: widget.keyboardType,
-      obscureText: _obscureText,
+      obscureText: widget.obscureText,
       decoration: InputDecoration(
         suffixIcon: widget.suffixIcon
             ? IconButton(
-                icon: Icon(
-                    _obscureText ? Icons.visibility : Icons.visibility_off),
+                icon: Icon(widget.obscureText
+                    ? Icons.visibility
+                    : Icons.visibility_off),
                 onPressed: () {
                   setState(() {
-                    _obscureText = !_obscureText;
+                    !widget.obscureText;
                   });
                 },
               )
@@ -58,5 +57,16 @@ class CustomTextFieldState extends State<CustomTextField> {
         // Puedes usar 'value' para obtener el valor actual del campo
       },
     );
+  }
+}
+
+class PasswordEditingController extends TextEditingController {
+  bool _obscureText = true;
+
+  bool get obscureText => _obscureText;
+
+  void togglePasswordVisibility() {
+    _obscureText = !_obscureText;
+    notifyListeners();
   }
 }

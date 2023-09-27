@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:venti_app/export_links.dart';
 
-class TotalCashierScreen extends StatelessWidget {
-  static const name = 'totalcashiers-screen';
-  const TotalCashierScreen({super.key});
+class NewCashRegisterScreen extends StatelessWidget {
+  static const name = 'newcashregister-screen';
+  const NewCashRegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,28 +28,50 @@ class TotalCashierScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
-                'Cajeros Creados',
+                'Crear caja registradora',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 12, horizontal: 18),
-              child: CustomTextField(
-                obscureText: true,
-                labelText: 'Contraseña',
-                hintText: 'Contraseña',
-                keyboardType: TextInputType.visiblePassword,
+            const SizedBox(height: 80),
+            const Center(
+              child: CircleAvatar(
+                maxRadius: 40,
+                child: ActionIconTheme(
+                  data: ActionIconThemeData(),
+                  child: Icon(
+                    Icons.person,
+                    size: 50,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 25),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18),
+              child: CustomTextField(
+                labelText: 'Nombre y apellidos',
+                hintText: 'Nombre completo',
+                keyboardType: TextInputType.name,
+              ),
+            ),
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18),
+              child: CustomTextField(
+                labelText: 'Numero de Documento',
+                hintText: 'CC, Carné, NIT',
+                keyboardType: TextInputType.number,
+              ),
+            ),
+            const SizedBox(height: 30),
             const Spacer(),
             const TextBottomScreens(
               textPrimary: 'Ver cajeros ',
               textSecund: 'Creados',
-              textDestination: '/newcashier-screen',
+              textDestination: '/totalcashiers-screen',
             ),
             const SizedBox(height: 16),
           ],

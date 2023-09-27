@@ -20,48 +20,48 @@ const appMenuItems = <MenuItem>[
       link: '/login-screen',
       icon: Icons.star_border),
   MenuItem(
-      title: 'Nuevo cajero',
-      subTitle: 'Login',
-      link: '/newcashier-screen',
-      icon: Icons.smart_button_outlined),
-  MenuItem(
-      title: 'Cajeros creados',
-      subTitle: 'Login',
-      link: '/totalcashiers-screen',
-      icon: Icons.credit_card),
-  MenuItem(
       title: 'Crear perfil',
       subTitle: 'Login',
       link: '/createdates-screen',
       icon: Icons.refresh_rounded),
   MenuItem(
-      title: '5',
+      title: '10',
       subTitle: 'Login',
-      link: '/totalcashers-screen',
+      link: '/login-screen',
+      icon: Icons.color_lens_sharp),
+  MenuItem(
+      title: 'Cajeros totales',
+      subTitle: 'Login',
+      link: '/totalcashiers-screen',
+      icon: Icons.credit_card),
+  MenuItem(
+      title: 'Nuevo cajero',
+      subTitle: 'Login',
+      link: '/newcashier-screen',
+      icon: Icons.smart_button_outlined),
+  MenuItem(
+      title: 'Editar cajero',
+      subTitle: 'Login',
+      link: '/editcashier-screen',
       icon: Icons.alarm_on_sharp),
   MenuItem(
-      title: '6',
+      title: 'Cajas totales',
       subTitle: 'Login',
-      link: '/login-screen',
+      link: '/totalcashregister-screen',
       icon: Icons.check_box_outline_blank_outlined),
   MenuItem(
-      title: '7',
+      title: 'Modificar caja',
       subTitle: 'Login',
-      link: '/login-screen',
+      link: '/editcashregister-screen',
       icon: Icons.camera_alt_sharp),
   MenuItem(
-      title: '8',
+      title: 'Nueva caja',
       subTitle: 'Login',
-      link: '/login-screen',
+      link: '/newcashregister-screen',
       icon: Icons.car_rental),
   MenuItem(
       title: '9',
       subTitle: 'Login',
       link: '/login-screen',
       icon: Icons.vibration_sharp),
-  MenuItem(
-      title: '10',
-      subTitle: 'Login',
-      link: '/login-screen',
-      icon: Icons.color_lens_sharp),
 ];

@@ -50,6 +50,7 @@ class LoginScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: CustomTextField(
                 obscureText: true,
+                suffixIcon: true,
                 labelText: 'Ingresa tu contraseña',
                 hintText: AutofillHints.password,
                 keyboardType: TextInputType.visiblePassword,

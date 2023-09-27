@@ -15,7 +15,7 @@ class NewPasswordScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 55),
             child: IconButton(
               onPressed: () => context.go('/home-screen'),
               icon: const Icon(
@@ -23,7 +23,7 @@ class NewPasswordScreen extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 35),
+          const SizedBox(height: 5),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 25),
             child: Text(

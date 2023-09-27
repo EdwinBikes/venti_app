@@ -1,8 +1,10 @@
 export 'package:venti_app/config/router/screens_router/app_router.dart';
 export 'package:venti_app/config/theme/app_theme.dart';
+export 'package:venti_app/infrastructure/models/animated_pages.dart';
+export 'package:venti_app/infrastructure/models/cashiers.dart';
 export 'package:venti_app/presentation/providers/theme_provider.dart';
 export 'package:venti_app/presentation/screens/cashiers/new_cashier.dart';
-export 'package:venti_app/presentation/screens/cashiers/views_total_cashier.dart';
+export 'package:venti_app/presentation/screens/cashiers/total_cashier.dart';
 export 'package:venti_app/presentation/screens/home/home_screen.dart';
 export 'package:venti_app/presentation/screens/home/side_menu.dart';
 export 'package:venti_app/presentation/screens/landing/landing_screen.dart';
@@ -14,5 +16,6 @@ export 'package:venti_app/presentation/screens/login/register_screen.dart';
 export 'package:venti_app/presentation/widgets/buttons/buttons.dart';
 export 'package:venti_app/presentation/widgets/customs/custom_appbar.dart';
 export 'package:venti_app/presentation/widgets/customs/custom_imput_field.dart';
+export 'package:venti_app/presentation/widgets/pageview/pageview.dart';
 export 'package:venti_app/presentation/widgets/text/text_bottom_screens.dart';
 export 'package:venti_app/presentation/widgets/textfield/text_field.dart';
